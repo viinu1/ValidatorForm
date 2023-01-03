@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <form action="" method="POST" class="form" id="form-1">
+            <h3 class="heading">Thành Viên Đăng Ký</h3>
+            <p class="desc">Cùng nhau học lập trình tại Nine Tails
+                <i class="icon fa-sharp fa-solid fa-heart"></i>
+            </p>
+
+            <div class="spacer"></div>
+
+            <div class="form-group">
+                <label for="fullname" class="form-lable">Tên đầy đủ</label>
+                <input class="noti" rules="required" id="fullname" type="text" name="fullname" placeholder="VD: Phạm Văn Vĩ">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="email" class="form-lable">Email</label>
+                <input class="noti" rules="required|email" id="email" type="text" name="email" placeholder="abc@gmail.com">
+                <span class="form-message"></span>
+            </div>
+            <!-- <div class="form-group">
+                <label for="phone" class="form-lable">Số điện thoại</label>
+                <input class="noti" id="phone" type="text" name="phone" placeholder="079xxxxxxx">
+                <span class="form-message"></span>
+            </div> -->
+            <div class="form-group">
+                <label for="password" class="form-lable">Mật Khẩu</label>
+                <input class="noti" rules="required|min:6" id="password" type="password" name="password" placeholder="">
+                <span class="form-message"></span>
+            </div>
+            <!-- <div class="form-group">
+                <label for="cofpassword" class="form-lable">Nhập lại mật khẩu</label>
+                <input class="noti" id="cofpassword" type="password" name="cofpassword" placeholder="">
+                <span class="form-message"></span>
+            </div> -->
+            <!-- <div class="form-group">
+                <label for="cofpassword" class="form-lable">File ảnh</label>
+                <input class="noti" id="avata" type="file" name="avata">
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group">
+                <label for="province" class="form-lable">Tỉnh/Thành Phố</label>
+                <select class="noti" id="province"  name="province">
+                    <option value="">--- Chọn Tỉnh/TP ---</option>
+                    <option value="hni">Hà Nội</option>
+                    <option value="hcm">Hồ Chí Minh</option>
+                    <option value="hpg">Hải phòng</option>
+                </select>
+                <span class="form-message"></span>
+            </div>
+            <div class="form-group horizontal">
+                <label for="cofpassword" class="form-lable">Giới tính</label>
+                <div><input class="noti" type="checkbox" value="male" name="gender" placeholder=""></div>
+                <div><input class="noti" type="checkbox" value="female" name="gender" placeholder=""></div>
+                <div><input class="noti" type="checkbox" value="other" name="gender" placeholder=""></div>
+                <span class="form-message"></span>
+            </div> -->
+            <button class="btn btn-dangky">Đăng Ký</button>
+            <p class="footer">Đăng nhập <a href="">Tại đây</a></p>
+        </form>
+    </div>
+    <script src="./validator-2.js"></script>
+
+    <script>
+        // Mong muốn 
+        // Validator({
+        //     form:"#form-1",
+        //     formGroupSelector:'.form-group',
+        //     errorSelector:'.form-message',
+        //     rules:[
+        //         Validator.isRequired('#fullname','Vui lòng nhập đầy đủ họ tên'),
+        //         Validator.isName('#fullname',"Vui lòng không nhập số trong tên"),
+        //         Validator.isRequired('#email'),
+        //         Validator.isRequired('#avata'),
+        //         Validator.isEmail('#email'),
+        //         Validator.minLength('#password',6),
+        //         Validator.isRequired('#cofpassword'),
+        //         Validator.isConfirmed('#cofpassword',function() {
+        //             return document.querySelector('#form-1 #password').value
+        //         },'mật khẩu nhập lại không chính xác'),
+        //         Validator.minLength('#phone',10),
+        //         Validator.isRequired('input[name="gender"]'),
+        //         Validator.isRequired('#province')
+
+        //     ],
+        //     onsubmit:function (data) {
+        //         console.log(data);
+        //     }
+        // })
+            
+        var form = new Validator('#form-1')
+        form.onSubmit = function (formData) {
+            console.log(formData);
+        }
+        
+    </script>
+</body>
+</html>

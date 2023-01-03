@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ccc;
+}
+
+.main{
+    padding: 24px;
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 3px 5px 6px rgb(114, 90, 90);
+}
+
+.heading{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.desc{
+    font-size: 16px;
+    text-align: center;
+    margin: 6px 0 16px 0;
+    font-style: italic;
+}
+
+.icon{
+    color: red;
+}
+.form-group{
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-lable{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-message{
+    font-size: 16px;
+}
+
+.noti{
+    padding: 6px;
+    width: 100%;
+    font-size: 12px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+.noti:focus{
+    border: 2px solid #00A7CE;
+
+}
+ 
+.btn-dangky{
+    font-size: 16px;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    background-color: #73D06F;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-dangky:hover{
+    background-color: #C7372F;
+    color: white;
+    
+}
+
+.form-group.invalid .form-message{
+    color: #C7372F;
+}
+.form-group.invalid .noti{
+    border: 2px solid #B22B27;
+}
+
+
+.footer{
+    text-align: center;
+    margin-top: 8px;
+}
+
+.footer a{
+    text-decoration: none;
+    color: red;
+}
+
+.footer a:hover{
+    text-decoration: underline;
+}
